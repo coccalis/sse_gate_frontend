@@ -1,1 +1,59 @@
 @import "tailwindcss";
+
+body {
+  background-color: #fdfaf6;
+}
+
+@theme {
+  /* LIGHT MODE COLORS */
+  --color-gate-control-light-background-primary: #fdfaf6;
+  --color-gate-control-light-surface-selected: #e4efe7;
+  --color-gate-control-light-surface-glass: #ffffffb8;
+  --color-gate-control-light-surface-input: #ffffffa6;
+  --color-gate-control-light-surface-modal: #fdfaf6f5;
+  --color-gate-control-light-surface-transparent: #00000000;
+  --color-gate-control-light-surface-warning: #faf1e6;
+  --color-gate-control-light-border-glass: #ffffff;
+  --color-gate-control-light-border-subtle: #dde5de;
+  --color-gate-control-light-accent-primary: #99bc85;
+  --color-gate-control-light-text-on-accent: #1f2a24;
+  --color-gate-control-light-text-primary: #1f2a24;
+  --color-gate-control-light-text-secondary: #6b7a71;
+  --color-gate-control-light-text-primary-2: #1f2a24;
+  --color-gate-control-light-text-secondary-2: #6b7a71;
+  --color-gate-control-light-status-positive-surface: #e4efe7;
+  --color-gate-control-light-status-positive-text: #34724b;
+  --color-gate-control-light-status-neutral-surface: #edf0ed;
+  --color-gate-control-light-status-danger-text: #ac5353;
+  --color-gate-control-light-status-danger-surface: #fae9e7;
+  --color-gate-control-light-status-warning-text: #936923;
+  --color-gate-control-light-overlay-backdrop: #17261e44;
+
+  /* DARK MODE COLORS */
+  --color-gate-control-dark-background-primary: #121815;
+  --color-gate-control-dark-surface-selected: #304133;
+  --color-gate-control-dark-surface-glass: #202b25c9;
+  --color-gate-control-dark-surface-input: #16201bb3;
+  --color-gate-control-dark-surface-modal: #202b25f5;
+  --color-gate-control-dark-surface-transparent: #00000000;
+  --color-gate-control-dark-surface-warning: #413828;
+  --color-gate-control-dark-border-glass: #ffffff12;
+  --color-gate-control-dark-border-subtle: #35423a;
+  --color-gate-control-dark-accent-primary: #99bc85;
+  --color-gate-control-dark-text-on-accent: #1f2a24;
+  --color-gate-control-dark-text-primary: #e4efe7;
+  --color-gate-control-dark-text-secondary: #9caea2;
+  --color-gate-control-dark-text-primary-2: #9caea2;
+  --color-gate-control-dark-text-secondary-2: #99bc85;
+  --color-gate-control-dark-status-positive-surface: #2b4333;
+  --color-gate-control-dark-status-positive-text: #acd5b5;
+  --color-gate-control-dark-status-neutral-surface: #2d3832;
+  --color-gate-control-dark-status-danger-text: #edadad;
+  --color-gate-control-dark-status-danger-surface: #482c2d;
+  --color-gate-control-dark-status-warning-text: #e5c188;
+  --color-gate-control-dark-overlay-backdrop: #060c09aa;
+
+  --spacing-base: 8px;
+
+  --radius-control: 13px;
+}
