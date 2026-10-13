@@ -1,5 +1,5 @@
 # SSE PILI (Frontend)
- 
+ Figma: https://www.figma.com/design/ggwHQYs2oFRn0ThxwJM7Ld/pili-sse?node-id=0-1&t=nTYLPWNIkkdlRaT7-1
  
 ## Requirements
  
