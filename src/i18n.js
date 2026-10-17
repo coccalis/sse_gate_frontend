@@ -2,6 +2,10 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { gateCheckEn, gateCheckEl } from "./features/CheckCredentials/locales";
+import {
+  personnelListEl,
+  personnelListEn,
+} from "./features/ViewPersonnel/locales";
 
 i18n
   .use(LanguageDetector)
@@ -37,6 +41,7 @@ i18n
           passCheckSubTitle:
             "Verify personnel and vehicles before granting facility access.",
           gateCheck: gateCheckEn,
+          personnelList: personnelListEn,
         },
       },
       el: {
@@ -63,6 +68,7 @@ i18n
           passCheckSubTitle:
             "Επαληθεύστε το προσωπικό και τα οχήματα πριν από την έγκριση εισόδου στις εγκαταστάσεις.",
           gateCheck: gateCheckEl,
+          personnelList: personnelListEl,
         },
       },
     },

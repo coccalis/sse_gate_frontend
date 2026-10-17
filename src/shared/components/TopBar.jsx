@@ -3,16 +3,9 @@ import { useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { IoMdMenu } from "react-icons/io";
-import { IoIosArrowForward } from "react-icons/io";
+import { LuSlash } from "react-icons/lu";
 import { openSidebar } from "../../store/uiSlice";
-
-// Adjust the paths to match your router. The value is the translation key.
-const ROUTE_KEYS = {
-  "/check": "check",
-  "/personnel": "viewPersonnel",
-  "/personnel/new": "addPersonnel",
-  "/logs": "logs",
-};
+import { nav_items } from "../data/nav-items";
 
 function TopBar() {
   const dispatch = useDispatch();
@@ -20,7 +13,6 @@ function TopBar() {
   const { pathname } = useLocation();
   const [now, setNow] = useState(() => new Date());
 
-  // Refresh once a minute so the date rolls over at midnight
   useEffect(() => {
     const id = setInterval(() => setNow(new Date()), 60_000);
     return () => clearInterval(id);
@@ -39,7 +31,7 @@ function TopBar() {
     year: "numeric",
   }).format(now);
 
-  const pageKey = ROUTE_KEYS[pathname];
+  const pageKey = nav_items.find((item) => item.path === pathname)?.id;
   const crumbs = pageKey ? [t("gate"), t(pageKey)] : [t("gate")];
 
   return (
@@ -77,7 +69,7 @@ function TopBar() {
                   {crumb}
                 </span>
                 {!last && (
-                  <IoIosArrowForward className="h-4 w-4 shrink-0 text-gate-control-light-text-secondary dark:text-gate-control-dark-text-secondary" />
+                  <LuSlash className="h-4 w-4 shrink-0 text-gate-control-light-text-secondary dark:text-gate-control-dark-text-secondary" />
                 )}
               </li>
             );

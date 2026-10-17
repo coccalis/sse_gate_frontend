@@ -1,8 +1,3 @@
-// Merge into your i18n.js:
-//   import { gateCheckEn, gateCheckEl } from "./features/CheckCredentials/locales";
-//   en: { translation: { ...existing, gateCheck: gateCheckEn } }
-//   el: { translation: { ...existing, gateCheck: gateCheckEl } }
-
 export const gateCheckEn = {
   title: "Credential check",
   subtitle:

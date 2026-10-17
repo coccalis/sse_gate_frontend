@@ -3,6 +3,7 @@ import settingsReducer, { THEME_KEY, LANGUAGE_KEY } from "./settingsSlice";
 import authReducer from "./authSlice";
 import uiReducer from "./uiSlice";
 import checkReduser from "./checkSlice";
+import personnelReduser from "./personnelSlice";
 
 export const store = configureStore({
   reducer: {
@@ -10,6 +11,7 @@ export const store = configureStore({
     ui: uiReducer,
     auth: authReducer,
     check: checkReduser,
+    personnel: personnelReduser,
   },
 });
 

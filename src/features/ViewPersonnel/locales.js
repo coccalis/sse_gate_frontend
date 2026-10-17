@@ -1,0 +1,114 @@
+// Merge into your i18n.js:
+//   import { personnelListEn, personnelListEl } from "./features/ViewPersonnel/locales";
+//   en: { translation: { ...existing, personnelList: personnelListEn } }
+//   el: { translation: { ...existing, personnelList: personnelListEl } }
+
+export const personnelListEn = {
+  title: "View personnel",
+  subtitle: "Manage personnel records, registered vehicles and live campus presence.",
+  summary: {
+    total: "{{value}} personnel",
+    inside: "{{value}} Inside",
+    outside: "{{value}} Outside",
+    add: "Add personnel",
+  },
+  filters: {
+    searchPlaceholder: "Search name, card ID or plate",
+    searchLabel: "Search personnel",
+    unit: "Unit",
+    rank: "Rank",
+    status: "Status",
+    allUnits: "All units",
+    allRanks: "All ranks",
+    allStatuses: "All statuses",
+    clear: "Clear filters",
+  },
+  columns: {
+    name: "Name",
+    rank: "Rank",
+    unit: "Unit",
+    plate: "Plate",
+    status: "Status",
+    actions: "Actions",
+  },
+  status: { inside: "Inside", outside: "Outside" },
+  actions: { edit: "Edit {{name}}", delete: "Delete {{name}}" },
+  pagination: {
+    showing: "Showing {{from}}–{{to}} of {{total}} personnel",
+    label: "Pagination",
+    previous: "Previous page",
+    next: "Next page",
+    page: "Page {{page}}",
+  },
+  states: {
+    errorTitle: "Could not load personnel",
+    errorText: "Check the connection and try again.",
+    retry: "Try again",
+    emptyTitle: "No personnel found",
+    emptyText: "Try changing the search or the filters.",
+    emptyDbTitle: "No personnel yet",
+    emptyDbText: "Add the first person to get started.",
+  },
+  delete: {
+    title: "Delete personnel?",
+    text: "{{name}} ({{cardId}}) will be permanently deleted together with the registered vehicles. This cannot be undone.",
+    confirm: "Delete",
+    cancel: "Cancel",
+    error: "Deleting failed. Please try again.",
+  },
+};
+
+export const personnelListEl = {
+  title: "Προβολή προσωπικού",
+  subtitle: "Διαχειριστείτε τις εγγραφές προσωπικού, τα καταχωρισμένα οχήματα και την παρουσία στις εγκαταστάσεις σε πραγματικό χρόνο.",
+  summary: {
+    total: "{{value}} προσωπικό",
+    inside: "{{value}} Εντός",
+    outside: "{{value}} Εκτός",
+    add: "Εισαγωγή προσωπικού",
+  },
+  filters: {
+    searchPlaceholder: "Αναζήτηση ονόματος, αριθμού κάρτας ή πινακίδας",
+    searchLabel: "Αναζήτηση προσωπικού",
+    unit: "Μονάδα",
+    rank: "Βαθμός",
+    status: "Κατάσταση",
+    allUnits: "Όλες οι μονάδες",
+    allRanks: "Όλοι οι βαθμοί",
+    allStatuses: "Όλες οι καταστάσεις",
+    clear: "Εκκαθάριση φίλτρων",
+  },
+  columns: {
+    name: "Όνομα",
+    rank: "Βαθμός",
+    unit: "Μονάδα",
+    plate: "Πινακίδα",
+    status: "Κατάσταση",
+    actions: "Ενέργειες",
+  },
+  status: { inside: "Εντός", outside: "Εκτός" },
+  actions: { edit: "Επεξεργασία: {{name}}", delete: "Διαγραφή: {{name}}" },
+  pagination: {
+    showing: "Εμφάνιση {{from}}–{{to}} από {{total}} προσωπικό",
+    label: "Σελιδοποίηση",
+    previous: "Προηγούμενη σελίδα",
+    next: "Επόμενη σελίδα",
+    page: "Σελίδα {{page}}",
+  },
+  states: {
+    errorTitle: "Δεν ήταν δυνατή η φόρτωση του προσωπικού",
+    errorText: "Ελέγξτε τη σύνδεση και δοκιμάστε ξανά.",
+    retry: "Δοκιμή ξανά",
+    emptyTitle: "Δεν βρέθηκε προσωπικό",
+    emptyText: "Δοκιμάστε να αλλάξετε την αναζήτηση ή τα φίλτρα.",
+    emptyDbTitle: "Δεν υπάρχει ακόμη προσωπικό",
+    emptyDbText: "Προσθέστε το πρώτο άτομο για να ξεκινήσετε.",
+  },
+  delete: {
+    title: "Διαγραφή προσωπικού;",
+    text: "Το άτομο {{name}} ({{cardId}}) θα διαγραφεί οριστικά μαζί με τα καταχωρισμένα οχήματά του. Η ενέργεια δεν μπορεί να αναιρεθεί.",
+    confirm: "Διαγραφή",
+    cancel: "Ακύρωση",
+    error: "Η διαγραφή απέτυχε. Δοκιμάστε ξανά.",
+  },
+};
