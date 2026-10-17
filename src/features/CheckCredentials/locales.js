@@ -1,0 +1,137 @@
+// Merge into your i18n.js:
+//   import { gateCheckEn, gateCheckEl } from "./features/CheckCredentials/locales";
+//   en: { translation: { ...existing, gateCheck: gateCheckEn } }
+//   el: { translation: { ...existing, gateCheck: gateCheckEl } }
+
+export const gateCheckEn = {
+  title: "Credential check",
+  subtitle:
+    "Verify personnel and vehicles before approving entry to the facility.",
+  scan: { title: "Scan card" },
+  direction: { label: "Direction", entry: "Entry", exit: "Exit" },
+  card: {
+    label: "Card number",
+    placeholder: "Scan or type the card number",
+    submit: "Check",
+    required: "Scan a card or type its number.",
+  },
+  plate: {
+    label: "License plate · Manual check",
+    placeholder: "e.g. XYH 4821",
+    submit: "Check plate",
+    required: "Type a license plate.",
+  },
+  reader: {
+    connected: "The card reader is connected",
+    ready: "Ready to scan",
+    disconnected: "The card reader is not connected",
+    checking: "Checking card reader…",
+  },
+  result: {
+    title: "Verification result",
+    waitingBadge: "Waiting",
+    validBadge: "Approved",
+    deniedBadge: "Denied",
+    errorBadge: "Error",
+    waitingTitle: "Waiting for scan",
+    waitingText: "Scan an ID or check a license plate to get started.",
+    grantedTitle: "Access granted",
+    recorded_entry: "Entry recorded",
+    recorded_exit: "Exit recorded",
+    deniedTitle: "Access denied",
+    errorTitle: "Could not reach the server",
+    errorText:
+      "Please try again. If the problem continues, contact the IT department.",
+    cardNumber: "Card number",
+    vehicles: "Registered vehicles",
+    noVehicles: "No registered vehicles",
+    scannedCard: "Card",
+    scannedPlate: "Plate",
+    not_found_help: "Confirm the card ID or contact the security desk.",
+  },
+  reasons: {
+    not_found_card: "The card is not recognized.",
+    not_found_plate: "The license plate is not registered.",
+    inactive: "The card is inactive.",
+    expired: "The card has expired.",
+    already_inside: "This person is already recorded as inside the facility.",
+    already_outside: "This person is already recorded as outside the facility.",
+    unknown: "Passage is not allowed.",
+  },
+  status: {
+    traffic: "Today's vehicle traffic",
+    inside: "{{value}} inside",
+    outside: "{{value}} personnel are outside",
+  },
+  recent: { title: "Recent scans", empty: "No recent scans" },
+  note: "Verify the photo and the registered license plate before opening the gate.",
+};
+
+export const gateCheckEl = {
+  title: "Έλεγχος διαπιστευτηρίων",
+  subtitle:
+    "Επαληθεύστε το προσωπικό και τα οχήματα πριν από την έγκριση εισόδου στις εγκαταστάσεις.",
+  scan: { title: "Σάρωση Κάρτας" },
+  direction: { label: "Κατεύθυνση", entry: "Είσοδος", exit: "Έξοδος" },
+  card: {
+    label: "Αριθμός Κάρτας",
+    placeholder: "Σάρωση ή πληκτρολόγηση αριθμού κάρτας",
+    submit: "Έλεγχος",
+    required: "Σαρώστε μια κάρτα ή πληκτρολογήστε τον αριθμό της.",
+  },
+  plate: {
+    label: "Αριθμός πινακίδας · Χειροκίνητος έλεγχος",
+    placeholder: "π.χ. ΧΥΗ 4821",
+    submit: "Έλεγχος Πινακίδας",
+    required: "Πληκτρολογήστε μια πινακίδα κυκλοφορίας.",
+  },
+  reader: {
+    connected: "Ο αναγνώστης καρτών είναι συνδεδεμένος",
+    ready: "Έτοιμος για σάρωση",
+    disconnected: "Ο αναγνώστης καρτών δεν είναι συνδεδεμένος",
+    checking: "Έλεγχος αναγνώστη καρτών…",
+  },
+  result: {
+    title: "Αποτέλεσμα επαλήθευσης",
+    waitingBadge: "Αναμονή",
+    validBadge: "Εγκρίθηκε",
+    deniedBadge: "Απορρίφθηκε",
+    errorBadge: "Σφάλμα",
+    waitingTitle: "Αναμονή για σάρωση",
+    waitingText:
+      "Σαρώστε μια ταυτότητα ή ελέγξτε μια πινακίδα κυκλοφορίας για να ξεκινήσετε.",
+    grantedTitle: "Η πρόσβαση εγκρίθηκε",
+    recorded_entry: "Καταγράφηκε είσοδος",
+    recorded_exit: "Καταγράφηκε έξοδος",
+    deniedTitle: "Η πρόσβαση απορρίφθηκε",
+    errorTitle: "Δεν ήταν δυνατή η επικοινωνία με τον διακομιστή",
+    errorText:
+      "Δοκιμάστε ξανά. Αν το πρόβλημα συνεχίζεται, ενημερώστε το τμήμα πληροφορικής.",
+    cardNumber: "Αριθμός κάρτας",
+    vehicles: "Καταχωρισμένα οχήματα",
+    noVehicles: "Δεν υπάρχουν καταχωρισμένα οχήματα",
+    scannedCard: "Κάρτα",
+    scannedPlate: "Πινακίδα",
+    not_found_help:
+      "Επιβεβαιώστε τον κωδικό της κάρτας ή επικοινωνήστε με το γραφείο ασφαλείας.",
+  },
+  reasons: {
+    not_found_card: "Η κάρτα δεν αναγνωρίζεται.",
+    not_found_plate: "Η πινακίδα δεν είναι καταχωρισμένη.",
+    inactive: "Η κάρτα είναι ανενεργή.",
+    expired: "Η κάρτα έχει λήξει.",
+    already_inside: "Το άτομο έχει ήδη καταγραφεί ως εντός των εγκαταστάσεων.",
+    already_outside: "Το άτομο έχει ήδη καταγραφεί ως εκτός των εγκαταστάσεων.",
+    unknown: "Δεν επιτρέπεται η διέλευση.",
+  },
+  status: {
+    traffic: "Σημερινή κίνηση οχημάτων",
+    inside: "{{value}} εντός",
+    outside: "{{value}} προσωπικό βρίσκεται εκτός",
+  },
+  recent: {
+    title: "Πρόσφατες σαρώσεις",
+    empty: "Δεν υπάρχουν πρόσφατες σαρώσεις",
+  },
+  note: "Επαληθεύστε τη φωτογραφία και την καταχωρισμένη πινακίδα κυκλοφορίας πριν από το άνοιγμα της πύλης.",
+};

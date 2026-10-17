@@ -2,12 +2,14 @@ import { configureStore } from "@reduxjs/toolkit";
 import settingsReducer, { THEME_KEY, LANGUAGE_KEY } from "./settingsSlice";
 import authReducer from "./authSlice";
 import uiReducer from "./uiSlice";
+import checkReduser from "./checkSlice";
 
 export const store = configureStore({
   reducer: {
     settings: settingsReducer,
     ui: uiReducer,
     auth: authReducer,
+    check: checkReduser,
   },
 });
 
