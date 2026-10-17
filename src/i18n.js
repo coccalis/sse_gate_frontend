@@ -6,8 +6,11 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    debug: true,
-    lng: "en",
+    debug: import.meta.env.DEV,
+    fallbackLng: "en", // instead of lng: "en"
+    supportedLngs: ["en", "el"],
+    load: "languageOnly", // "en-GB" -> "en"
+    interpolation: { escapeValue: false }, // React already escapes
     resources: {
       en: {
         translation: {
@@ -26,7 +29,12 @@ i18n
           logout: "Log out",
           openMenu: "Open menu",
           closeMenu: "Close menu",
+          language: "Language",
           locale: "en-GB",
+          //PASS CHECK PAGE
+          passCheckTitle: "Check credentials",
+          passCheckSubTitle:
+            "Verify personnel and vehicles before granting facility access.",
         },
       },
       el: {
@@ -46,8 +54,18 @@ i18n
           logout: "Αποσύνδεση",
           openMenu: "Άνοιγμα μενού",
           closeMenu: "Κλείσιμο μενού",
+          language: "Γλώσσα",
           locale: "el-GR",
+          //PASS CHECK PAGE
+          passCheckTitle: "Έλεγχος διαπιστευτηρίων",
+          passCheckSubTitle:
+            "Επαληθεύστε το προσωπικό και τα οχήματα πριν από την έγκριση εισόδου στις εγκαταστάσεις.",
         },
       },
     },
   });
+
+i18n.on("languageChanged", (lng) => {
+  document.documentElement.lang = lng;
+});
+export default i18n;

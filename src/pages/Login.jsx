@@ -32,11 +32,11 @@ function Login() {
     }
   };
   return (
-    <section className="flex flex-col min-h-screen items-center justify-center ">
-      <div className="w-full max-w-xl space-y-5 rounded-control border border-gate-control-light-border-glass  bg-gate-control-light-surface-glass p-8 backdrop-blur ">
-        <div className="flex flex-col justify-center items-center">
-          <img src={Logo} alt="SSE-LOGO" className="w-1/5 h-1/5 " />
-          <h1 className="text-center text-2xl font-semibold text-fg text-gate-control-light-text-primary">
+    <section className="flex min-h-screen flex-col items-center justify-center bg-gate-control-light-background-primary px-4 dark:bg-gate-control-dark-background-primary">
+      <div className="w-full max-w-xl space-y-5 rounded-control border border-gate-control-light-border-glass bg-gate-control-light-surface-glass p-8 shadow-sm backdrop-blur-xl dark:border-gate-control-dark-border-glass dark:bg-gate-control-dark-surface-glass">
+        <div className="flex flex-col items-center justify-center">
+          <img src={Logo} alt="SSE-LOGO" className="w-1/5 h-1/5" />
+          <h1 className="text-center text-2xl font-semibold text-gate-control-light-text-primary dark:text-gate-control-dark-text-primary">
             Εφαρμογή Πύλης ΣΣΕ
           </h1>
         </div>
@@ -66,7 +66,7 @@ function Login() {
           </div>
         </form>
       </div>
-      <span className="my-2.5 flex flex-row justify-center items-center space-x-2.5 text-gate-control-light-text-secondary text-xs">
+      <span className="my-2.5 flex flex-row items-center justify-center space-x-2.5 text-xs text-gate-control-light-text-secondary dark:text-gate-control-dark-text-secondary">
         <IoShieldCheckmarkOutline />
         <p>Μόνο εξουσιοδοτημένο προσωπικό · Στρατιωτική Σχολή Ευελπίδων</p>
       </span>
