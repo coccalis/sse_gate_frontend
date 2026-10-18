@@ -21,13 +21,12 @@ function LanguageSelector() {
         className="h-4 w-4 text-gate-control-light-text-secondary dark:text-gate-control-dark-text-secondary"
         aria-hidden="true"
       />
-      {/* Native select stretched over the whole control: accessible and
-          gives the OS picker on mobile for free. */}
+
       <select
         value={current.code}
         onChange={(e) => i18n.changeLanguage(e.target.value)}
         aria-label={t("language")}
-        className="absolute inset-0 h-full w-full cursor-pointer opacity-0"
+        className="absolute inset-0 h-full w-full cursor-pointer opacity-0 bg-gate-control-light-surface-input dark:bg-gate-control-dark-surface-input"
       >
         {LANGUAGES.map((l) => (
           <option key={l.code} value={l.code}>
