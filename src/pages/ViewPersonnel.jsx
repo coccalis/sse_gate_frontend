@@ -7,7 +7,7 @@ function ViewPersonnel() {
   const { t } = useTranslation();
   return (
     <div className="mx-auto w-full max-w-8xl space-y-6">
-      <header>
+      <header className=" space-y-1.5">
         <h1 className="text-3xl font-semibold text-gate-control-light-text-primary dark:text-gate-control-dark-text-primary">
           {t("personnelList.title")}
         </h1>

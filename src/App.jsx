@@ -9,6 +9,9 @@ import ProtectedLayout from "./app/router/layout/ProtectedLayout";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "./shared/utils/http";
 import ViewPersonnel from "./pages/ViewPersonnel";
+import AddPersonnel from "./pages/AddPersonnel";
+import PersonnelForm from "./pages/PersonnelForm";
+import EditPersonnel from "./pages/EditPersonnel";
 function App() {
   const router = createBrowserRouter([
     {
@@ -28,6 +31,14 @@ function App() {
         {
           path: "/view-personnel",
           element: <ViewPersonnel />,
+        },
+        {
+          path: "/personnel/new",
+          element: <AddPersonnel />,
+        },
+        {
+          path: "/personnel/:id/edit",
+          element: <EditPersonnel />,
         },
       ],
     },

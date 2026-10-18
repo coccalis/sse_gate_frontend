@@ -9,12 +9,12 @@ function Home() {
   const { t } = useTranslation();
   return (
     <div className="mx-auto w-full max-w-8xl space-y-6 lg:h-full lg:min-h-0">
-      <div className="w-full space-y-1.5">
-        <header>
+      <div className="w-full ">
+        <header className="space-y-1.5">
           <h1 className=" text-3xl font-semibold text-gate-control-light-text-primary dark:text-gate-control-dark-text-primary">
             {t("passCheckTitle")}
           </h1>
-          <p className="font-semibold text-gate-control-light-text-secondary dark:text-gate-control-dark-text-secondary">
+          <p className="text-sm text-gate-control-light-text-secondary dark:text-gate-control-dark-text-secondary">
             {t("passCheckSubTitle")}
           </p>
         </header>

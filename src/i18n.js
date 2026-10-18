@@ -6,6 +6,14 @@ import {
   personnelListEl,
   personnelListEn,
 } from "./features/ViewPersonnel/locales";
+import {
+  personnelFormEl,
+  personnelFormEn,
+} from "./features/PersonnelForm/locales";
+import {
+  personnelEditEl,
+  personnelEditEn,
+} from "./features/EditPersonnel/locales";
 
 i18n
   .use(LanguageDetector)
@@ -42,6 +50,8 @@ i18n
             "Verify personnel and vehicles before granting facility access.",
           gateCheck: gateCheckEn,
           personnelList: personnelListEn,
+          personnelForm: personnelFormEn,
+          personnelEdit: personnelEditEn,
         },
       },
       el: {
@@ -69,6 +79,8 @@ i18n
             "Επαληθεύστε το προσωπικό και τα οχήματα πριν από την έγκριση εισόδου στις εγκαταστάσεις.",
           gateCheck: gateCheckEl,
           personnelList: personnelListEl,
+          personnelForm: personnelFormEl,
+          personnelEdit: personnelEditEl,
         },
       },
     },
