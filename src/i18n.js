@@ -14,6 +14,8 @@ import {
   personnelEditEl,
   personnelEditEn,
 } from "./features/EditPersonnel/locales";
+import { commonEn, commonEl } from "./shared/locales";
+import { logsPageEn, logsPageEl } from "./features/Logs/locales";
 
 i18n
   .use(LanguageDetector)
@@ -52,6 +54,8 @@ i18n
           personnelList: personnelListEn,
           personnelForm: personnelFormEn,
           personnelEdit: personnelEditEn,
+          logsPage: logsPageEn,
+          common: commonEn,
         },
       },
       el: {
@@ -81,6 +85,8 @@ i18n
           personnelList: personnelListEl,
           personnelForm: personnelFormEl,
           personnelEdit: personnelEditEl,
+          logsPage: logsPageEl,
+          common: commonEl,
         },
       },
     },

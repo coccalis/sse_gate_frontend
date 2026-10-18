@@ -115,8 +115,10 @@ function makePerson(i) {
 
   return {
     id: i + 1,
-    firstName: (female ? FEMALE : MALE)[(i * 5) % 12],
-    lastName: SURNAMES[(i * 7 + 3) % SURNAMES.length][female ? 1 : 0],
+    // Every full name is unique: i / 2 walks the first names, i / 24 moves to the next surname
+    firstName: (female ? FEMALE : MALE)[Math.floor(i / 2) % 12],
+    lastName:
+      SURNAMES[(Math.floor(i / 24) * 5 + 3) % SURNAMES.length][female ? 1 : 0],
     rank: RANKS[(i * 3) % RANKS.length],
     unit: UNITS[(i * 11) % UNITS.length],
     cardId: `GC-${String(4821 + i * 13).padStart(6, "0")}`,

@@ -12,6 +12,7 @@ import ViewPersonnel from "./pages/ViewPersonnel";
 import AddPersonnel from "./pages/AddPersonnel";
 import PersonnelForm from "./pages/PersonnelForm";
 import EditPersonnel from "./pages/EditPersonnel";
+import Logs from "./pages/Logs";
 function App() {
   const router = createBrowserRouter([
     {
@@ -40,12 +41,16 @@ function App() {
           path: "/personnel/:id/edit",
           element: <EditPersonnel />,
         },
+        {
+          path: "/logs",
+          element: <Logs />,
+        },
       ],
     },
   ]);
   return (
     <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />;
+      <RouterProvider router={router} />
     </QueryClientProvider>
   );
 }

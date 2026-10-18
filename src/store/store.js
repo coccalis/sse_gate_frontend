@@ -4,6 +4,7 @@ import authReducer from "./authSlice";
 import uiReducer from "./uiSlice";
 import checkReduser from "./checkSlice";
 import personnelReduser from "./personnelSlice";
+import logsReduser from "./logsSlice";
 
 export const store = configureStore({
   reducer: {
@@ -12,6 +13,7 @@ export const store = configureStore({
     auth: authReducer,
     check: checkReduser,
     personnel: personnelReduser,
+    logs: logsReduser,
   },
 });
 

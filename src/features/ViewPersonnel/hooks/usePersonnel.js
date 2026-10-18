@@ -6,8 +6,6 @@ import { filterPersonnel } from "../utils/filterPersonnel";
 
 const PERSONNEL_KEY = ["personnel"];
 
-// Stable reference. `data ?? []` would create a NEW array on every render
-
 const EMPTY = [];
 
 export function usePersonnel() {

@@ -15,7 +15,7 @@ function ThemeSelector() {
       type="button"
       onClick={() => dispatch(toggleTheme())}
       aria-pressed={dark}
-      className="flex w-full items-center justify-between rounded-control border border-gate-control-light-border-subtle bg-gate-control-light-surface-input px-4 py-2.5 text-sm text-gate-control-light-text-primary transition-colors hover:bg-gate-control-light-surface-selected focus:outline-none focus-visible:ring-2 focus-visible:ring-gate-control-light-accent-primary dark:border-gate-control-dark-border-subtle dark:bg-gate-control-dark-surface-input dark:text-gate-control-dark-text-primary dark:hover:bg-gate-control-dark-surface-selected dark:focus-visible:ring-gate-control-dark-accent-primary"
+      className="flex w-full items-center justify-between rounded-control border border-gate-control-light-border-subtle bg-gate-control-light-surface-input px-4 py-2.5 text-sm text-gate-control-light-text-primary transition-colors hover:bg-gate-control-light-surface-selected focus:outline-none focus-visible:ring-2 focus-visible:ring-gate-control-light-accent-primary dark:border-gate-control-dark-border-subtle dark:bg-gate-control-dark-surface-input dark:text-gate-control-dark-text-primary dark:hover:bg-gate-control-dark-surface-selected dark:focus-visible:ring-gate-control-dark-accent-primary cursor-pointer"
     >
       <LuSun
         className={`h-4 w-4 ${dark ? "opacity-40" : ""}`}

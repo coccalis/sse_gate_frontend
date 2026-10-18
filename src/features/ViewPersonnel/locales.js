@@ -1,11 +1,7 @@
-// Merge into your i18n.js:
-//   import { personnelListEn, personnelListEl } from "./features/ViewPersonnel/locales";
-//   en: { translation: { ...existing, personnelList: personnelListEn } }
-//   el: { translation: { ...existing, personnelList: personnelListEl } }
-
 export const personnelListEn = {
   title: "View personnel",
-  subtitle: "Manage personnel records, registered vehicles and live campus presence.",
+  subtitle:
+    "Manage personnel records, registered vehicles and live campus presence.",
   summary: {
     total: "{{value}} personnel",
     inside: "{{value}} Inside",
@@ -60,7 +56,8 @@ export const personnelListEn = {
 
 export const personnelListEl = {
   title: "Προβολή προσωπικού",
-  subtitle: "Διαχειριστείτε τις εγγραφές προσωπικού, τα καταχωρισμένα οχήματα και την παρουσία στις εγκαταστάσεις σε πραγματικό χρόνο.",
+  subtitle:
+    "Διαχειριστείτε τις εγγραφές προσωπικού, τα καταχωρισμένα οχήματα και την παρουσία στις εγκαταστάσεις σε πραγματικό χρόνο.",
   summary: {
     total: "{{value}} προσωπικό",
     inside: "{{value}} Εντός",

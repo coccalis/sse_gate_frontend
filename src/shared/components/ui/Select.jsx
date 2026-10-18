@@ -2,7 +2,8 @@ import { useId } from "react";
 import { LuChevronDown } from "react-icons/lu";
 
 // Labelled <select> that matches Textfield. options: [{ value, label }]
-// value "" shows the placeholder.
+// value "" shows the placeholder. `muteEmpty={false}` keeps the placeholder in
+// the normal text color (for filters, where "All" is a real choice).
 export default function Select({
   title,
   name,
@@ -12,12 +13,13 @@ export default function Select({
   placeholder,
   error,
   disabled = false,
+  muteEmpty = true,
   className = "",
   ...props
 }) {
   const id = useId();
   const errorId = `${id}-error`;
-  const isEmpty = value === "";
+  const muted = value === "" && muteEmpty;
 
   return (
     <div className="space-y-1.5">
@@ -41,7 +43,7 @@ export default function Select({
           aria-describedby={error ? errorId : undefined}
           {...props}
           className={`w-full cursor-pointer appearance-none rounded-control border bg-gate-control-light-surface-input px-3 py-3 pr-10 text-sm focus:outline-none focus:ring-1 disabled:cursor-not-allowed disabled:opacity-60 dark:bg-gate-control-dark-surface-input dark:[color-scheme:dark] ${
-            isEmpty
+            muted
               ? "text-gate-control-light-text-secondary dark:text-gate-control-dark-text-secondary"
               : "text-gate-control-light-text-primary dark:text-gate-control-dark-text-primary"
           } ${
