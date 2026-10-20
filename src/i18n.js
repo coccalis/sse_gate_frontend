@@ -15,7 +15,7 @@ import {
   personnelEditEn,
 } from "./features/EditPersonnel/locales";
 import { commonEn, commonEl } from "./shared/locales";
-import { logsPageEn, logsPageEl } from "./features/Logs/locales";
+import { logsPageEn, logsPageEl } from "./features/LogsPersonnel/locales";
 
 i18n
   .use(LanguageDetector)

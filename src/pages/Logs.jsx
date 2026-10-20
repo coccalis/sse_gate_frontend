@@ -1,8 +1,8 @@
 import { useTranslation } from "react-i18next";
-import LogsFilters from "../features/Logs/components/LogsFilters";
-import PersonProfileCard from "../features/Logs/components/PersonProfileCard";
-import HistoryHeader from "../features/Logs/components/HistoryHeader";
-import LogsTable from "../features/Logs/components/LogsTable";
+import LogsFilters from "../features/LogsPersonnel/components/LogsFilters";
+import PersonProfileCard from "../features/LogsPersonnel/components/PersonProfileCard";
+import HistoryHeader from "../features/LogsPersonnel/components/HistoryHeader";
+import LogsTable from "../features/LogsPersonnel/components/LogsTable";
 
 function Logs() {
   const { t } = useTranslation();
