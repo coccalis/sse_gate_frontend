@@ -28,7 +28,7 @@ export default function DirectionToggle() {
             role="radio"
             aria-checked={selected}
             onClick={() => dispatch(setDirection(value))}
-            className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gate-control-light-accent-primary dark:focus-visible:ring-gate-control-dark-accent-primary ${
+            className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gate-control-light-accent-primary dark:focus-visible:ring-gate-control-dark-accent-primary cursor-pointer ${
               selected
                 ? "bg-gate-control-light-accent-primary text-gate-control-light-text-on-accent dark:bg-gate-control-dark-accent-primary dark:text-gate-control-dark-text-on-accent"
                 : "text-gate-control-light-text-secondary hover:text-gate-control-light-text-primary dark:text-gate-control-dark-text-secondary dark:hover:text-gate-control-dark-text-primary"

@@ -6,6 +6,7 @@ import { IoMdMenu } from "react-icons/io";
 import { LuSlash } from "react-icons/lu";
 import { openSidebar } from "../../store/uiSlice";
 import { nav_items } from "../data/nav-items";
+import { TopBarFullDate, TopBarShortDate } from "../utils/dates";
 
 function TopBar() {
   const dispatch = useDispatch();
@@ -19,24 +20,14 @@ function TopBar() {
   }, []);
 
   const locale = t("locale");
-  const fullDate = new Intl.DateTimeFormat(locale, {
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  }).format(now);
-  const shortDate = new Intl.DateTimeFormat(locale, {
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric",
-  }).format(now);
+  const fullDate = TopBarFullDate(locale, now);
+  const shortDate = TopBarShortDate(locale, now);
 
   const pageKey = nav_items.find((item) => item.path === pathname)?.id;
   const crumbs = pageKey ? [t("gate"), t(pageKey)] : [t("gate")];
 
   return (
     <header className="flex h-16 shrink-0 items-center gap-3 border-b border-gate-control-light-border-subtle bg-transparent px-4 backdrop-blur-xl dark:border-gate-control-dark-border-subtle dark:bg-transparent sm:px-6">
-      {/* Hamburger (mobile only) */}
       <button
         type="button"
         onClick={() => dispatch(openSidebar())}
@@ -46,7 +37,6 @@ function TopBar() {
         <IoMdMenu className="h-6 w-6" />
       </button>
 
-      {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="min-w-0 flex-1">
         <ol className="flex items-center gap-1.5 text-sm">
           {crumbs.map((crumb, i) => {
@@ -77,7 +67,6 @@ function TopBar() {
         </ol>
       </nav>
 
-      {/* Date */}
       <time
         dateTime={now.toISOString()}
         className="shrink-0 text-sm font-medium capitalize text-gate-control-light-text-secondary dark:text-gate-control-dark-text-secondary"

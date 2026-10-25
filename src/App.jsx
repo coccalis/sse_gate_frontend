@@ -10,9 +10,12 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { queryClient } from "./shared/utils/http";
 import ViewPersonnel from "./pages/ViewPersonnel";
 import AddPersonnel from "./pages/AddPersonnel";
-import PersonnelForm from "./pages/PersonnelForm";
 import EditPersonnel from "./pages/EditPersonnel";
 import Logs from "./pages/Logs";
+import UsersPage from "./pages/UsersPage";
+import EditUserPage from "./pages/EditUserPage";
+import CreateUserPage from "./pages/CreateUserPage";
+import RequireAdmin from "./app/router/layout/RequireAdmin";
 function App() {
   const router = createBrowserRouter([
     {
@@ -34,16 +37,24 @@ function App() {
           element: <ViewPersonnel />,
         },
         {
-          path: "/personnel/new",
-          element: <AddPersonnel />,
-        },
-        {
           path: "/personnel/:id/edit",
           element: <EditPersonnel />,
         },
         {
           path: "/logs",
           element: <Logs />,
+        },
+        {
+          element: <RequireAdmin />,
+          children: [
+            {
+              path: "/personnel/new",
+              element: <AddPersonnel />,
+            },
+            { path: "/admin/users", element: <UsersPage /> },
+            { path: "/admin/users/new", element: <CreateUserPage /> },
+            { path: "/admin/users/:id/edit", element: <EditUserPage /> },
+          ],
         },
       ],
     },

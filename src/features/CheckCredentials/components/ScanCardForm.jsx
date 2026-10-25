@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from "react";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
 import { LuScanLine } from "react-icons/lu";
-
 import { useScanCard } from "../hooks/useGate";
 import ReaderHint from "./ReaderHint";
 import Textfield from "../../../shared/components/ui/Textfield";
@@ -71,7 +70,7 @@ export default function ScanCardForm() {
         <Button
           type="submit"
           loading={isPending}
-          className="h-[46px] shrink-0 px-6"
+          className="h-11.5 shrink-0 px-6"
         >
           {t("gateCheck.card.submit")}
         </Button>

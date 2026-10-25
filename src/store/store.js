@@ -5,6 +5,7 @@ import uiReducer from "./uiSlice";
 import checkReduser from "./checkSlice";
 import personnelReduser from "./personnelSlice";
 import logsReduser from "./logsSlice";
+import usersReducer from "./usersSlice";
 
 export const store = configureStore({
   reducer: {
@@ -14,6 +15,7 @@ export const store = configureStore({
     check: checkReduser,
     personnel: personnelReduser,
     logs: logsReduser,
+    users: usersReducer,
   },
 });
 

@@ -16,16 +16,17 @@ import {
 } from "./features/EditPersonnel/locales";
 import { commonEn, commonEl } from "./shared/locales";
 import { logsPageEn, logsPageEl } from "./features/LogsPersonnel/locales";
+import { usersPageEl, usersPageEn } from "./features/Users/locales";
 
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     debug: import.meta.env.DEV,
-    fallbackLng: "en", // instead of lng: "en"
+    fallbackLng: "en",
     supportedLngs: ["en", "el"],
-    load: "languageOnly", // "en-GB" -> "en"
-    interpolation: { escapeValue: false }, // React already escapes
+    load: "languageOnly",
+    interpolation: { escapeValue: false },
     resources: {
       en: {
         translation: {
@@ -46,6 +47,13 @@ i18n
           closeMenu: "Close menu",
           language: "Language",
           locale: "en-GB",
+          adminSection: "Administration",
+          adminUsers: "Users",
+          adminCreateUser: "Create User",
+          usernameTextFiledLogin: "Username",
+          passwordTextFiledLogin: "Password",
+          btnLogin: "Sign In",
+          secureAccessNote: "Authorized personnel only · Hellenic Army Academy",
           //PASS CHECK PAGE
           passCheckTitle: "Check credentials",
           passCheckSubTitle:
@@ -56,6 +64,7 @@ i18n
           personnelEdit: personnelEditEn,
           logsPage: logsPageEn,
           common: commonEn,
+          usersPage: usersPageEn,
         },
       },
       el: {
@@ -77,6 +86,14 @@ i18n
           closeMenu: "Κλείσιμο μενού",
           language: "Γλώσσα",
           locale: "el-GR",
+          adminSection: "Διαχειριστικό",
+          adminUsers: "Χρήστες",
+          adminCreateUser: "Δημιουργία Χρήστη",
+          usernameTextFiledLogin: "Όνομα Χρήστη",
+          passwordTextFiledLogin: "Κωδικός Πρόσβασης",
+          btnLogin: "Σύνδεση",
+          secureAccessNote:
+            "Μόνο εξουσιοδοτημένο προσωπικό · Στρατιωτική Σχολή Ευελπίδων.",
           //PASS CHECK PAGE
           passCheckTitle: "Έλεγχος διαπιστευτηρίων",
           passCheckSubTitle:
@@ -87,6 +104,7 @@ i18n
           personnelEdit: personnelEditEl,
           logsPage: logsPageEl,
           common: commonEl,
+          usersPage: usersPageEl,
         },
       },
     },

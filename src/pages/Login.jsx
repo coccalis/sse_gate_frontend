@@ -7,8 +7,10 @@ import { IoShieldCheckmarkOutline } from "react-icons/io5";
 import { Navigate, useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { login } from "../store/authSlice";
+import { useTranslation } from "react-i18next";
 
 function Login() {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
@@ -37,22 +39,22 @@ function Login() {
         <div className="flex flex-col items-center justify-center">
           <img src={Logo} alt="SSE-LOGO" className="w-1/5 h-1/5" />
           <h1 className="text-center text-2xl font-semibold text-gate-control-light-text-primary dark:text-gate-control-dark-text-primary">
-            Εφαρμογή Πύλης ΣΣΕ
+            {t("appName")}
           </h1>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-5">
           <Textfield
-            title={"Όνομα χρήστη"}
+            title={t("usernameTextFiledLogin")}
             type={"text"}
-            placeholder={"Όνομα Χρήστη"}
+            placeholder={t("usernameTextFiledLogin")}
             name="username"
             icon={CiUser}
             value={form.username}
             onChange={handleChange}
           />
           <Textfield
-            title={"Κωδικός Πρόσβασης"}
+            title={t("passwordTextFiledLogin")}
             type={"password"}
             name="password"
             icon={CiLock}
@@ -61,14 +63,14 @@ function Login() {
           />
           <div className="flex  justify-center items-center">
             <Button type="submit" className="w-full">
-              Σύνδεση
+              {t("btnLogin")}
             </Button>
           </div>
         </form>
       </div>
       <span className="my-2.5 flex flex-row items-center justify-center space-x-2.5 text-xs text-gate-control-light-text-secondary dark:text-gate-control-dark-text-secondary">
         <IoShieldCheckmarkOutline />
-        <p>Μόνο εξουσιοδοτημένο προσωπικό · Στρατιωτική Σχολή Ευελπίδων</p>
+        <p>{t("secureAccessNote")}</p>
       </span>
     </section>
   );

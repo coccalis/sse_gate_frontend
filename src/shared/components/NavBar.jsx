@@ -1,14 +1,14 @@
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { IoMdClose } from "react-icons/io";
+import { closeSidebar } from "../../store/uiSlice";
 import SidebarHeader from "../../features/SideBar/components/SideBarHeader";
 import SidebarNav from "../../features/SideBar/components/SideBarNav";
 import ThemeSelector from "../../features/SideBar/components/ThemeSelector";
 import LanguageSelector from "../../features/SideBar/components/languageSelector";
-import { useTranslation } from "react-i18next";
-import { IoMdClose } from "react-icons/io";
 import SidebarUser from "../../features/SideBar/components/SideBarUser";
-import { closeSidebar } from "../../store/uiSlice";
 
 function NavBar() {
   const dispatch = useDispatch();

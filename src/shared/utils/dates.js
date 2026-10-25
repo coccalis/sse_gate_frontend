@@ -1,6 +1,3 @@
-// Dates travel as "YYYY-MM-DD" strings (local calendar days): no time zones
-// involved, serializable for Redux, and they compare correctly as plain text.
-
 const pad = (n) => String(n).padStart(2, "0");
 
 export const toISODate = (date) =>
@@ -17,7 +14,6 @@ export const addDays = (date, amount) =>
 export const todayISO = () => toISODate(new Date());
 
 // Cells of one month, padded with null up to full weeks.
-// weekStartsOn: 1 = Monday (the Greek week), 0 = Sunday
 export function buildMonthGrid(year, month, weekStartsOn = 1) {
   const offset = (new Date(year, month, 1).getDay() - weekStartsOn + 7) % 7;
   const daysInMonth = new Date(year, month + 1, 0).getDate();
@@ -25,7 +21,7 @@ export function buildMonthGrid(year, month, weekStartsOn = 1) {
   const cells = [
     ...Array(offset).fill(null),
     ...Array.from({ length: daysInMonth }, (_, i) =>
-      toISODate(new Date(year, month, i + 1))
+      toISODate(new Date(year, month, i + 1)),
     ),
   ];
   while (cells.length % 7 !== 0) cells.push(null);
@@ -55,4 +51,21 @@ export function formatDateRange(from, to, locale) {
   }
   if (sameYear) return `${day(start)} ${month(start)} – ${full(end)}`;
   return `${full(start)} – ${full(end)}`;
+}
+
+// Date shown on the top bar
+export function TopBarFullDate(locale, now) {
+  return new Intl.DateTimeFormat(locale, {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  }).format(now);
+}
+export function TopBarShortDate(locale, now) {
+  return new Intl.DateTimeFormat(locale, {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+  }).format(now);
 }
